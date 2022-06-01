@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Carbon Tiptoe!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+<link rel="icon" href="icon.png">
+</head>
+<body>
+
+
+<!-------Navigation pannel ------>
+<div id="nav">
+  <img src="logo.png" id=logo alt="description" height=100% width=auto />
+  <ul>
+    <li> <button id=trigger-modal class=custom-color>Register</button> </li>
+    <li> <a href="#" class=custom-color>Log In</a> </li>
+    <li> <a href="#welcome" class=custom-color>About</a> </li>
+    
+  </ul>
+</div>
+
+<!------- about us ------>
+<div id="about">
+  <div id="welcome">                            
+    <h1><b>Welcome to Carbon Tiptoe!</b></h1>
+    <h2>Dedicated to a cleaner Aotearoa 🌿</h2>
+    <p> Here at Carbon Tiptoe! we offer a patent pending test that provides YOU the chance to make an impact from 
+      home by educating our users on their own carbon emmissons. We are also dedicated to making the planet green 
+      by 2030 our work impacts conservation in more than 70 countries and territories thanks to our members, staff and scientists.
+    </p>                    
+  </div>
+  <div id="calculator">                       
+    <h3> Find out how YOU can<br>reduce your emmissions!</h3>
+    <button id=survey>Find My CO<sub>2</sub></button>                        
+  </div>
+</div>
+
+<!------- bottem row of three divs ------>
+
+<div id="extrainfo">
+  <div id="howItWorks">                                
+      <h2>How It Works:</h2>  
+      <p> CO<sub>2</sub>e represents your total carbon emmissions, or calculator uses of all aspects 
+          of your life style (keeping your information private, obviously) to determine the most exact 
+          consumption possible. we will then highlight areas where your consumption is higher than the national 
+          average and offer potential, cost effective alternatives in these areas</p>   
+          <button id=bottembttns>learn more</button>                
+  </div>
+  <div id="stories">                       
+      <h2>Our Stories</h2>       
+      <img src="africa.jpg" alt="Our employee, Will shaking the hand of an african tribe leader" style='height: 100%; width: 100%; object-fit: contain'>
+      <p> This is one of our team members, Will, during his trip to Somalia making sure YOUR donations are being 
+          put to good use in our 2022 international education project, where we build schools and learning facilities 
+          in the poorest and most remote places in the world </p>     
+          <button id=bottembttns>Read More</button>              
+  </div>
+  <div id="help">                       
+      <h2>Help Us!</h2>
+      <p> while our carbon emmission software is free to use, our efforts to help improve the planet rely on the kindess 
+          of everybody who donates even the smallest amount towards our missions.
+      </p>        
+      <button id=bottembttns>Donate Now!</button>                  
+  </div>
+</div>
+
+<!-- Registration modal -->
+<div id="RegisterModel" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="ct-form">
+    <form>
+      <h3>Please fill in this form to create an account.</h3>
+      <hr>
+
+      <div id="userDetails"> 
+        <p>User Details</p>
+        <label for="Name"><b>Name</b></label>
+        <div class="names"> 
+          <input type="text" placeholder="First Name(s)" name="fname" id="name" required>
+          <input type="text" placeholder="Surname" name="sname" id="name" required>
+        </div>
+
+        <label for="user"><b>Username</b></label>
+
+        <input type="text" placeholder="Username" name="uname" id="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+      </div>
+
+      <hr>
+
+      <div id="addresses"> 
+        <p>Addresses</p>
+        <label for="haddy"><b>Home Address</b></label>
+
+        <input type="text" placeholder="(optional)" name="haddy" id="haddy" >
+
+        <label for="waddy"><b>Work Address</b></label>
+
+        <input type="text" placeholder="(optional)" name="waddy" id="waddy" >
+
+      </div>
+      <hr>
+      <div id="contacts">
+        <p>Contact Info.</p>
+        <label for="phone"><b>Phone Number</b></label>
+
+        <input type="text" placeholder="e.g. 021432098" name="phone" id="phone" required>
+
+        <label for="email"><b>Email</b></label>
+
+        <input type="email" placeholder="e.g. name@gmail.com" name="email" id="email" required>
+
+      </div>
+
+      <hr>
+
+      <button type="submit" class="registerbtn">Register</button>
+    </form>
+    </div>
+  
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("RegisterModel");
+
+// Get the button that opens the modal
+var btn = document.getElementById("trigger-modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+modal.style.display = "none";
+</script>
+</body>
+</html>
+
